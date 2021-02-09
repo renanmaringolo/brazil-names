@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+puts '== Instalando dependências =='
+system 'gem install bundler --conservative'
+system('bundle check') || system('bundle install')
+
+require 'sqlite3'
+
+puts "\n== Preparando banco de dados =="
+begin
+  db = SQLite3::Database.open "db/database.db"
+  db.execute <<~SQL
+    CREATE TABLE states(
+      id integer primary key autoincrement not null,
+      uf varchar(2),
+      state_name varchar(40)
+    );
+  SQL
+
+  seed_data = [[1, "SP", "São Paulo"],
+               [2, "RJ", "Rio de Janeiro"]]
+
+  seed_data.each do |data|
+    db.execute "INSERT INTO states VALUES (?, ?, ? )", data
+  end
+
+rescue SQLite3::Exception => e
+  puts e
+ensure
+  db.close if db
+end

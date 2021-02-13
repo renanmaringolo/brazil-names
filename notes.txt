@@ -1,11 +1,6 @@
-
-====próximos passos - CONFIGURAÇÃO/ESTRUTURAÇÃO====
-# subir pro github com uma classe State criada e persistida no DB
-1) Criar projeto, criar Gemfile e rodar bin/setup para instalar as dependencias e criar o DB.
-  1.1) Criar um Model - por exemplo - 'ActiveRecord ou com nome similar (este model será responsável por conectar com o DB e as Classes)
-  1.2) estruturar as tabelas no DB contidas no arquivo do desafio com os atributos necessários
-  1.3) Garantir que os Models estão criando, listando e persistidos no DB.
-
-2) Separar Model de objeto 
-3) criar um model para simular um Controller
-  3.1) consumir o endpoint 'localidades/estados' dentro deste "controller"
+1) analisar e escolher o endpoint da api
+2) abrir endpoint no browser
+3) copiar informações necessaria para um arquivo json dentro de spec/fixtures
+4) escrever teste do controller esperando um html a partir do json do arquivo
+5) fazer o teste passar 
+6) voltar para o passo 1

@@ -5,7 +5,7 @@ class StatesController < ApplicationController
   def show
     api_response = StatesAPI.get_state(params[:id])
 
-    body = "<h1>#{api_response['nome']}</h1>"
+    body = "<h1>#{api_response['sigla']}</h1>"
 
     { body: body, status: 200 }
   end
@@ -14,7 +14,7 @@ class StatesController < ApplicationController
     api_response = StatesAPI.list_states
 
     list_html = api_response.each_with_object("") do |json_row, acc|
-      acc << "<li>#{json_row['nome']}</li>"
+      acc << "<li>#{json_row['sigla']}</li>"
     end
 
     body = "<ul>#{list_html}</ul>"

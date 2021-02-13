@@ -1,8 +1,8 @@
 [
   {
     "id": 11,
-    "sigla": "RO",
-    "nome": "First State",
+    "sigla": "FS",
+    "nome": "Rondônia",
     "regiao": {
       "id": 1,
       "sigla": "N",
@@ -11,8 +11,8 @@
   },
   {
     "id": 12,
-    "sigla": "AC",
-    "nome": "Second State",
+    "sigla": "SS",
+    "nome": "Acre",
     "regiao": {
       "id": 1,
       "sigla": "N",

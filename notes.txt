@@ -9,4 +9,7 @@ Udemy tips:
 mock api 
 service scope  - aqui será +- como um modelo
 manipular lista
-each_with_object "" - 
+
+url's: 
+  https://servicodados.ibge.gov.br/api/v1/localidades/estados/ #index
+  https://servicodados.ibge.gov.br/api/v1/localidades/estados/35 #show

@@ -1,7 +1,7 @@
 {
   "id": 11,
-  "sigla": "My State",
-  "nome": "Rondônia",
+  "sigla": "RO",
+  "nome": "My State",
   "regiao": {
     "id": 1,
     "sigla": "N",

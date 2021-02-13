@@ -4,3 +4,9 @@
 4) escrever teste do controller esperando um html a partir do json do arquivo
 5) fazer o teste passar 
 6) voltar para o passo 1
+
+Udemy tips:
+mock api 
+service scope  - aqui será +- como um modelo
+manipular lista
+each_with_object "" - 

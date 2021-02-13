@@ -7,4 +7,13 @@ describe StatesController do
       })
     end
   end
+
+  describe '#index' do
+    it 'list the states' do
+      expect(subject.index).to eq({
+        body: '<ul><li>First State</li><li>Second State</li></ul>',
+        status: 200
+      })
+    end
+  end
 end

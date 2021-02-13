@@ -1,0 +1,22 @@
+[
+  {
+    "id": 11,
+    "sigla": "RO",
+    "nome": "First State",
+    "regiao": {
+      "id": 1,
+      "sigla": "N",
+      "nome": "Norte"
+    }
+  },
+  {
+    "id": 12,
+    "sigla": "AC",
+    "nome": "Second State",
+    "regiao": {
+      "id": 1,
+      "sigla": "N",
+      "nome": "Norte"
+    }
+  }
+]

@@ -11,7 +11,7 @@ class StatesController < ApplicationController
   def index
     api_response = StatesAPI.list_states
     
-    list_html = api_response.each_with_object([]) do |line_json, acc|
+    list = api_response.each_with_object([]) do |line_json, acc|
       acc << line_json['sigla']
     end
   end
@@ -19,7 +19,7 @@ class StatesController < ApplicationController
   def ranking_general_state
     api_response = StatesAPI.list_names_state
     
-    list_html = api_response.each_with_object([]) do |line_json, acc|
+    list = api_response.each_with_object([]) do |line_json, acc|
       acc << line_json['nome']
     end
   end
@@ -27,7 +27,7 @@ class StatesController < ApplicationController
   def ranking_by_female
     api_response = StatesAPI.by_female
 
-    list_html = api_response.each_with_object([]) do |line_json, acc|
+    list = api_response.each_with_object([]) do |line_json, acc|
       acc << line_json['nome']
     end
   end
@@ -35,7 +35,7 @@ class StatesController < ApplicationController
   def ranking_by_male
     api_response = StatesAPI.by_male
 
-    list_html = api_response.each_with_object([]) do |line_json, acc|
+    list = api_response.each_with_object([]) do |line_json, acc|
       acc << line_json['nome']
     end
   end

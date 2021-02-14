@@ -4,21 +4,23 @@ require 'json'
 class StatesController < ApplicationController
   def show
     api_response = StatesAPI.get_state(params[:id])
-
-    body = "<h1>#{api_response['sigla']}</h1>"
-
-    { body: body, status: 200 }
+    
+    api_response['sigla']
   end
 
   def index
     api_response = StatesAPI.list_states
-
-    list_html = api_response.each_with_object("") do |json_row, acc|
-      acc << "<li>#{json_row['sigla']}</li>"
+    
+    list_html = api_response.each_with_object([]) do |line_json, acc|
+      acc << line_json['sigla']
     end
+  end
 
-    body = "<ul>#{list_html}</ul>"
-
-    { body: body, status: 200 }
+  def ranking_general_state
+    api_response = StatesAPI.list_names_state
+    
+    list_html = api_response.each_with_object([]) do |line_json, acc|
+      acc << line_json['nome']
+    end
   end
 end

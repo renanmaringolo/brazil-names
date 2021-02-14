@@ -10,4 +10,12 @@ class StatesAPI
 
     JSON.parse(api_response)
   end
+
+  def self.list_names_state
+    api_response = File.read("spec/fixtures/states/rankings/ranking_names.json")
+    
+    ranking = JSON.parse(api_response).first.to_a
+    
+    ranking.last.last
+  end
 end

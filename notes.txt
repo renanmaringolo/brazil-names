@@ -13,8 +13,10 @@ manipular lista
 url's: 
   https://servicodados.ibge.gov.br/api/v1/localidades/estados/ #index
   https://servicodados.ibge.gov.br/api/v1/localidades/estados/35 #show
-  https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#35 #ranking_names_general
+  https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#35 #ranking_names_general_state
   https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=f #ranking_by_female
   https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=m #ranking_by_male
   https://servicodados.ibge.gov.br/api/v1/localidades/municipios/1100023 #show
   https://servicodados.ibge.gov.br/api/v1/localidades/municipios #index
+  https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023 #ranking_names_general_city
+  https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023&sexo=f #ranking_by_female_city

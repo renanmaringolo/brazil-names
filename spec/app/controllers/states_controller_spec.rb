@@ -19,11 +19,11 @@ describe StatesController do
 
   describe '#ranking_genre_state' do
     it 'list ranking by genre female state' do
-      expect(subject.ranking_by_female).to eq(['MARIA', 'ANA'])
+      expect(subject.state_by_female).to eq(['MARIA', 'ANA'])
     end
 
     it 'list ranking by genre male state' do
-      expect(subject.ranking_by_male).to eq(['JOSE', 'JOAO'])
+      expect(subject.state_by_male).to eq(['JOSE', 'JOAO'])
     end
   end
 end

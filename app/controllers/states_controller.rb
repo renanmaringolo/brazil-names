@@ -24,7 +24,7 @@ class StatesController < ApplicationController
     end
   end
 
-  def ranking_by_female
+  def state_by_female
     api_response = StatesAPI.by_female
 
     list = api_response.each_with_object([]) do |line_json, acc|
@@ -32,7 +32,7 @@ class StatesController < ApplicationController
     end
   end
 
-  def ranking_by_male
+  def state_by_male
     api_response = StatesAPI.by_male
 
     list = api_response.each_with_object([]) do |line_json, acc|

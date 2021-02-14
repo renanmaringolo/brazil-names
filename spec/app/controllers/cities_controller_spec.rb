@@ -10,4 +10,20 @@ describe CitiesController do
       expect(subject.index).to eq(['Alta Floresta dOeste', 'Ariquemes'])
     end
   end
+
+  describe '#ranking_general_city' do
+    it 'list ranking names by City' do
+      expect(subject.ranking_general_city).to eq(['MARIA', 'JOSE', 'JOAO'])
+    end
+  end
+
+  describe '#ranking_genre_city' do
+    it 'list ranking by genre female city' do
+      expect(subject.city_by_female).to eq(['MARIA', 'ANA'])
+    end
+
+    it 'list ranking by genre male city' do
+      expect(subject.city_by_male).to eq(['JOSE', 'JOAO'])
+    end
+  end
 end

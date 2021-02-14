@@ -5,7 +5,7 @@
 5) fazer o teste passar 
 6) voltar para o passo 1
 
-Udemy tips:
+
 mock api 
 service scope  - aqui será +- como um modelo
 manipular lista
@@ -13,3 +13,6 @@ manipular lista
 url's: 
   https://servicodados.ibge.gov.br/api/v1/localidades/estados/ #index
   https://servicodados.ibge.gov.br/api/v1/localidades/estados/35 #show
+  https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#35 #ranking_names_general
+  https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=f #ranking_by_female
+  https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=m #ranking_by_male

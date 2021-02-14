@@ -23,4 +23,20 @@ class StatesController < ApplicationController
       acc << line_json['nome']
     end
   end
+
+  def ranking_by_female
+    api_response = StatesAPI.by_female
+
+    list_html = api_response.each_with_object([]) do |line_json, acc|
+      acc << line_json['nome']
+    end
+  end
+
+  def ranking_by_male
+    api_response = StatesAPI.by_male
+
+    list_html = api_response.each_with_object([]) do |line_json, acc|
+      acc << line_json['nome']
+    end
+  end
 end

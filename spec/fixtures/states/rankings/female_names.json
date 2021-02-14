@@ -1,0 +1,18 @@
+[
+  {
+    "localidade": "BR",
+    "sexo": "F",
+    "res": [
+      {
+        "nome": "MARIA",
+        "frequencia": 11694738,
+        "ranking": 1
+      },
+      {
+        "nome": "ANA",
+        "frequencia": 3079729,
+        "ranking": 2
+      }
+    ]
+  }
+]

@@ -18,4 +18,20 @@ class StatesAPI
     
     ranking.last.last
   end
+
+  def self.by_female
+    api_response = File.read("spec/fixtures/states/rankings/female_names.json")
+
+    ranking = JSON.parse(api_response).first.to_a
+
+    ranking.last.last
+  end
+
+  def self.by_male
+    api_response = File.read("spec/fixtures/states/rankings/male_names.json")
+
+    ranking = JSON.parse(api_response).first.to_a
+
+    ranking.last.last
+  end
 end

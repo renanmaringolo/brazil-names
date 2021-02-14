@@ -24,5 +24,5 @@ Atualmente o projeto conta com 100,00% de cobertura de teste, de acordo com o Si
 ####
 Observações: 
 1) A gem Rest-Client não está sendo usada atualmente, pois no início da aplicação eu estava utilizando-a para fazer mock dos dados. 
-  1.1) Cada request na API, estou mockando dados manualmente em 'spec/fixtures..' e chamando esse arquivo através de uma Classe responsável por conectar com a API (no caso atual um arquivo).
+1.1) Cada request na API, estou mockando dados manualmente em 'spec/fixtures..' e chamando esse arquivo através de uma Classe responsável por conectar com a API (no caso atual um arquivo).
 ####

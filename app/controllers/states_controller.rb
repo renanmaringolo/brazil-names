@@ -4,22 +4,22 @@ require 'json'
 class StatesController < ApplicationController
   def show
     api_response = StatesAPI.get_state(params[:id])
-    
+
     api_response['sigla']
   end
 
   def index
     api_response = StatesAPI.list_states
-    
-    list = api_response.each_with_object([]) do |line_json, acc|
+
+    api_response.each_with_object([]) do |line_json, acc|
       acc << line_json['sigla']
     end
   end
 
   def ranking_general_state
     api_response = StatesAPI.list_names_state
-    
-    list = api_response.each_with_object([]) do |line_json, acc|
+
+    api_response.each_with_object([]) do |line_json, acc|
       acc << line_json['nome']
     end
   end
@@ -27,7 +27,7 @@ class StatesController < ApplicationController
   def state_by_female
     api_response = StatesAPI.by_female
 
-    list = api_response.each_with_object([]) do |line_json, acc|
+    api_response.each_with_object([]) do |line_json, acc|
       acc << line_json['nome']
     end
   end
@@ -35,7 +35,7 @@ class StatesController < ApplicationController
   def state_by_male
     api_response = StatesAPI.by_male
 
-    list = api_response.each_with_object([]) do |line_json, acc|
+    api_response.each_with_object([]) do |line_json, acc|
       acc << line_json['nome']
     end
   end

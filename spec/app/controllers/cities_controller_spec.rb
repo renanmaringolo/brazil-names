@@ -1,7 +1,7 @@
 describe CitiesController do
   describe '#show' do
     it 'show the city details' do
-      expect(described_class.new({ id: 1100015}).show).to eq('Alta Floresta dOeste')
+      expect(described_class.new({ id: 1_100_015 }).show).to eq('Alta Floresta dOeste')
     end
   end
 
@@ -13,17 +13,17 @@ describe CitiesController do
 
   describe '#ranking_general_city' do
     it 'list ranking names by City' do
-      expect(subject.ranking_general_city).to eq(['MARIA', 'JOSE', 'JOAO'])
+      expect(subject.ranking_general_city).to eq(%w[MARIA JOSE JOAO])
     end
   end
 
   describe '#ranking_genre_city' do
     it 'list ranking by genre female city' do
-      expect(subject.city_by_female).to eq(['MARIA', 'ANA'])
+      expect(subject.city_by_female).to eq(%w[MARIA ANA])
     end
 
     it 'list ranking by genre male city' do
-      expect(subject.city_by_male).to eq(['JOSE', 'JOAO'])
+      expect(subject.city_by_male).to eq(%w[JOSE JOAO])
     end
   end
 end

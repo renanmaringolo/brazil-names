@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe StatesController do
   describe '#show' do
     it 'show the state details' do

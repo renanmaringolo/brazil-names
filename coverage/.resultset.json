@@ -3,6 +3,8 @@
     "coverage": {
       "/home/nan/Documents/code/challenge_rebase/app/services/cities_api.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -44,6 +46,8 @@
       },
       "/home/nan/Documents/code/challenge_rebase/app/services/states_api.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -85,6 +89,8 @@
       },
       "/home/nan/Documents/code/challenge_rebase/app/controllers/application_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -96,6 +102,8 @@
       },
       "/home/nan/Documents/code/challenge_rebase/app/controllers/cities_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -142,6 +150,8 @@
       },
       "/home/nan/Documents/code/challenge_rebase/app/controllers/states_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -188,6 +198,8 @@
       },
       "/home/nan/Documents/code/challenge_rebase/spec/app/controllers/cities_controller_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -221,6 +233,8 @@
       },
       "/home/nan/Documents/code/challenge_rebase/spec/app/controllers/states_controller_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -253,6 +267,6 @@
         ]
       }
     },
-    "timestamp": 1613276436
+    "timestamp": 1613396960
   }
 }

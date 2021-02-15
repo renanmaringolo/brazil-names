@@ -1,3 +1,7 @@
+# frozen_string_literal: true
+
+# rubocop:disable Style/Documentation
+
 class CitiesAPI
   def self.get_city(id)
     api_response = File.read("spec/fixtures/cities/#{id}.json")

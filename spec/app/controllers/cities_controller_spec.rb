@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe CitiesController do
   describe '#show' do
     it 'show the city details' do

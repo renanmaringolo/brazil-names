@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
-
+# frozen_string_literal: true
 
 PROJECT_ROOT = File.expand_path('..', __dir__)
 
-Dir[File.join(PROJECT_ROOT, 'app', 'services', '*.rb')].each { |f| require f }
-Dir[File.join(PROJECT_ROOT, 'app', 'controllers', '*.rb')].each { |f| require f }
+Dir[File.join(PROJECT_ROOT, 'app', 'services', '*.rb')].sort.each { |f| require f }
+Dir[File.join(PROJECT_ROOT, 'app', 'controllers', '*.rb')].sort.each { |f| require f }
 
 CitiesAPI.configure_type_request(:api)
 StatesAPI.configure_type_request(:api)
@@ -19,6 +19,7 @@ puts '5 - Listar Cidades'
 puts '6 - Ranking por Cidade'
 puts '7 - Ranking por Gênero Feminino/Cidade'
 puts '8 - Ranking por Gênero Masculino/Cidade'
+puts '0 - Sair'
 
 print 'Escolha uma opção: '
 opcao = gets.to_i
@@ -48,4 +49,6 @@ when 7
 when 8
   rank_by_masc_city = CitiesController.new
   puts rank_by_masc_city.city_by_male
+else
+  puts 'Até logo'
 end

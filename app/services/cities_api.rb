@@ -18,10 +18,11 @@ class CitiesAPI
   end
 
   def self.list_cities
-    if request == :api
+    case request
+    when :api
       api_response = RestClient
-      .get("https://servicodados.ibge.gov.br/api/v1/localidades/municipios")
-    elsif request == :file
+                     .get('https://servicodados.ibge.gov.br/api/v1/localidades/municipios')
+    when :file
       api_response = File.read('spec/fixtures/cities.json')
     end
 
@@ -29,11 +30,12 @@ class CitiesAPI
   end
 
   def self.list_names_city
-    if request == :api
+    case request
+    when :api
       api_response = RestClient
-      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023")
-    elsif request == :file
-      api_response = File.read("spec/fixtures/cities/rankings/ranking_names.json")
+                     .get('https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023')
+    when :file
+      api_response = File.read('spec/fixtures/cities/rankings/ranking_names.json')
     end
 
     ranking = JSON.parse(api_response).first.to_a
@@ -42,11 +44,12 @@ class CitiesAPI
   end
 
   def self.by_female
-    if request == :api
+    case request
+    when :api
       api_response = RestClient
-      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023&sexo=f")
-    elsif request == :file
-      api_response = File.read("spec/fixtures/cities/rankings/city_female_names.json")
+                     .get('https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023&sexo=f')
+    when :file
+      api_response = File.read('spec/fixtures/cities/rankings/city_female_names.json')
     end
 
     ranking = JSON.parse(api_response).first.to_a
@@ -55,13 +58,14 @@ class CitiesAPI
   end
 
   def self.by_male
-    if request == :api
+    case request
+    when :api
       api_response = RestClient
-      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023&sexo=m")
-    elsif request == :file
-      api_response = File.read("spec/fixtures/cities/rankings/city_male_names.json")
+                     .get('https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023&sexo=m')
+    when :file
+      api_response = File.read('spec/fixtures/cities/rankings/city_male_names.json')
     end
-    
+
     ranking = JSON.parse(api_response).first.to_a
 
     ranking.last.last

@@ -18,21 +18,21 @@ class StatesController < ApplicationController
     api_response = StatesAPI.list_states
 
     linhas = []
-  
+
     api_response.each do |result|
       nome = result.to_a[0].last
       code_state = result.to_a[1].last
       temp = [nome, code_state]
       linhas << temp
     end
-    Terminal::Table.new :title => 'Estados', :headings => ['Nome', 'Código Estado'], :rows => linhas
+    Terminal::Table.new title: 'Estados', headings: ['Nome', 'Código Estado'], rows: linhas
   end
 
   def ranking_general_state
     api_response = StatesAPI.list_names_state
-    
+
     linhas = []
-  
+
     api_response.each do |result|
       nome = result.to_a[0].last
       frequencia = result.to_a[1].last
@@ -40,14 +40,14 @@ class StatesController < ApplicationController
       temp = [nome, frequencia, rank]
       linhas << temp
     end
-    Terminal::Table.new :title => 'Ranking por Estado', :headings => ['Nome', 'Frequência', 'Ranking'], :rows => linhas
+    Terminal::Table.new title: 'Ranking por Estado', headings: %w[Nome Frequência Ranking], rows: linhas
   end
 
   def state_by_female
     api_response = StatesAPI.by_female
 
     linhas = []
-  
+
     api_response.each do |result|
       nome = result.to_a[0].last
       frequencia = result.to_a[1].last
@@ -55,14 +55,15 @@ class StatesController < ApplicationController
       temp = [nome, frequencia, rank]
       linhas << temp
     end
-    Terminal::Table.new :title => 'Ranking por Sexo Feminino/Estado', :headings => ['Nome', 'Frequência', 'Ranking'], :rows => linhas
+    Terminal::Table.new title: 'Ranking por Sexo Feminino/Estado', headings: %w[Nome Frequência Ranking],
+                        rows: linhas
   end
 
   def state_by_male
     api_response = StatesAPI.by_male
 
     linhas = []
-  
+
     api_response.each do |result|
       nome = result.to_a[0].last
       frequencia = result.to_a[1].last
@@ -70,6 +71,7 @@ class StatesController < ApplicationController
       temp = [nome, frequencia, rank]
       linhas << temp
     end
-    Terminal::Table.new :title => 'Ranking por Sexo Masculino/Estado', :headings => ['Nome', 'Frequência', 'Ranking'], :rows => linhas
+    Terminal::Table.new title: 'Ranking por Sexo Masculino/Estado', headings: %w[Nome Frequência Ranking],
+                        rows: linhas
   end
 end

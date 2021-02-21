@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'rest-client'
 # rubocop:disable Style/Documentation
 
@@ -18,22 +19,24 @@ class StatesAPI
   end
 
   def self.list_states
-    if request == :api
+    case request
+    when :api
       api_response = RestClient
-      .get("https://servicodados.ibge.gov.br/api/v1/localidades/estados/")
-    elsif request == :file
-      api_response = File.read("spec/fixtures/states.json")
+                     .get('https://servicodados.ibge.gov.br/api/v1/localidades/estados/')
+    when :file
+      api_response = File.read('spec/fixtures/states.json')
     end
 
     JSON.parse(api_response)
   end
 
   def self.list_names_state
-    if request == :api
+    case request
+    when :api
       api_response = RestClient
-      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#35")
-    elsif request == :file
-      api_response = File.read("spec/fixtures/states/rankings/ranking_names.json")
+                     .get('https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#35')
+    when :file
+      api_response = File.read('spec/fixtures/states/rankings/ranking_names.json')
     end
 
     ranking = JSON.parse(api_response).first.to_a
@@ -42,11 +45,12 @@ class StatesAPI
   end
 
   def self.by_female
-    if request == :api
+    case request
+    when :api
       api_response = RestClient
-      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=f")
-    elsif request == :file
-      api_response = File.read("spec/fixtures/states/rankings/state_female_names.json")
+                     .get('https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=f')
+    when :file
+      api_response = File.read('spec/fixtures/states/rankings/state_female_names.json')
     end
 
     ranking = JSON.parse(api_response).first.to_a
@@ -55,13 +59,14 @@ class StatesAPI
   end
 
   def self.by_male
-    if request == :api
+    case request
+    when :api
       api_response = RestClient
-      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=m")
-    elsif request == :file
-      api_response = File.read("spec/fixtures/states/rankings/state_male_names.json")
+                     .get('https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=m')
+    when :file
+      api_response = File.read('spec/fixtures/states/rankings/state_male_names.json')
     end
-    
+
     ranking = JSON.parse(api_response).first.to_a
 
     ranking.last.last

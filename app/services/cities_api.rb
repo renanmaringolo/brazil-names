@@ -29,8 +29,12 @@ class CitiesAPI
   end
 
   def self.list_names_city
-    api_response = RestClient
-    .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023")
+    if request == :api
+      api_response = RestClient
+      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023")
+    elsif request == :file
+      api_response = File.read("spec/fixtures/cities/rankings/ranking_names.json")
+    end
 
     ranking = JSON.parse(api_response).first.to_a
 
@@ -38,8 +42,12 @@ class CitiesAPI
   end
 
   def self.by_female
-    api_response = RestClient
-    .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023&sexo=f")
+    if request == :api
+      api_response = RestClient
+      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023&sexo=f")
+    elsif request == :file
+      api_response = File.read("spec/fixtures/cities/rankings/city_female_names.json")
+    end
 
     ranking = JSON.parse(api_response).first.to_a
 
@@ -47,9 +55,13 @@ class CitiesAPI
   end
 
   def self.by_male
-    api_response = RestClient
-    .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023&sexo=m")
-
+    if request == :api
+      api_response = RestClient
+      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=1100023&sexo=m")
+    elsif request == :file
+      api_response = File.read("spec/fixtures/cities/rankings/city_male_names.json")
+    end
+    
     ranking = JSON.parse(api_response).first.to_a
 
     ranking.last.last

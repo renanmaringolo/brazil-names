@@ -1,9 +1,13 @@
-require './app/controllers/states_controller'
-require './app/controllers/cities_controller'
-require './app/services/states_api'
-require './app/services/cities_api'
+#!/usr/bin/env ruby
+
+
+PROJECT_ROOT = File.expand_path('..', __dir__)
+
+Dir[File.join(PROJECT_ROOT, 'app', 'services', '*.rb')].each { |f| require f }
+Dir[File.join(PROJECT_ROOT, 'app', 'controllers', '*.rb')].each { |f| require f }
 
 CitiesAPI.configure_type_request(:api)
+StatesAPI.configure_type_request(:api)
 
 puts '==== Nomes Brasil ===='
 puts '## Menu ##'
@@ -18,7 +22,6 @@ puts '8 - Ranking por Gênero Masculino/Cidade'
 
 print 'Escolha uma opção: '
 opcao = gets.to_i
-
 
 case opcao
 when 1

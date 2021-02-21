@@ -10,3 +10,4 @@ Dir[File.join(PROJECT_ROOT, 'app', 'services', '*.rb')].sort.each { |f| require 
 Dir[File.join(PROJECT_ROOT, 'app', 'controllers', '*.rb')].sort.each { |f| require f }
 
 CitiesAPI.configure_type_request(:file)
+StatesAPI.configure_type_request(:file)

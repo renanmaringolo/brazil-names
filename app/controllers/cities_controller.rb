@@ -9,7 +9,7 @@ class CitiesController < ApplicationController
   def show
     api_response = CitiesAPI.get_city(params[:id])
 
-    api_response.first['nome']
+    api_response.first['id']
   end
 
   def index

@@ -12,8 +12,22 @@ class StatesAPI
     @type_request
   end
 
+  def self.get_acronym(acronym)
+    uri = URI('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
+    response = RestClient.get(uri.to_s)
+    states_hash = JSON.parse(response.body)
+    state = states_hash.find { |state| state['sigla'] == acronym }
+  end
+
   def self.get_state(id)
-    api_response = File.read("spec/fixtures/states/#{id}.json")
+    case request
+    when :api
+      state = get_acronym(acronym)
+      api_response = RestClient
+                     .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#{state['id']}")
+    when :file
+      api_response = File.read("spec/fixtures/states/#{id}.json")
+    end
 
     JSON.parse(api_response)
   end
@@ -28,13 +42,6 @@ class StatesAPI
     end
 
     JSON.parse(api_response)
-  end
-
-  def self.get_acronym(acronym)
-    uri = URI('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
-    response = RestClient.get(uri.to_s)
-    states_hash = JSON.parse(response.body)
-    state = states_hash.find { |state| state['sigla'] == acronym }
   end
 
   def self.list_names_state(acronym)

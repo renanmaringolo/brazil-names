@@ -3,7 +3,7 @@
 describe CitiesController do
   describe '#show' do
     it 'show the city details' do
-      expect(described_class.new({ id: 1_100_015 }).show).to eq('Alta Floresta dOeste')
+      expect(described_class.new({ id: 1_100_015 }).show).to eq(1_100_015)
     end
   end
 

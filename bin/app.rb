@@ -3,7 +3,7 @@
 
 PROJECT_ROOT = File.expand_path('..', __dir__)
 
-Dir[File.join(PROJECT_ROOT, 'bin', 'ux.rb')].sort.each { |f| require f }
+Dir[File.join(PROJECT_ROOT, 'bin', 'ui.rb')].sort.each { |f| require f }
 Dir[File.join(PROJECT_ROOT, 'app', 'services', '*.rb')].sort.each { |f| require f }
 Dir[File.join(PROJECT_ROOT, 'app', 'controllers', '*.rb')].sort.each { |f| require f }
 

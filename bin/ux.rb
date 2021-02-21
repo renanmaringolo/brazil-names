@@ -39,18 +39,19 @@ def menu
     cities = CitiesController.new
     puts cities.index
   when 6
-    print 'Digite a UF a ser consultada (Rio de Janeiro, Salvador...): '
-    name = gets.strip.upcase.to_s
+    print 'Digite a Cidade a ser consultada (São Paulo, Salvador...): '
+    name = gets.strip
+
     ranking_by_city = CitiesController.new
     puts ranking_by_city.ranking_general_city(name)
   when 7
-    print 'Digite a UF a ser consultada (Rio de Janeiro, Salvador...): '
-    name = gets.strip.upcase.to_s
+    print 'Digite a Cidade a ser consultada (São Paulo, Salvador...): '
+    name = gets.strip
     rank_by_fem_city = CitiesController.new
     puts rank_by_fem_city.city_by_female(name)
   when 8
-    print 'Digite a UF a ser consultada (Rio de Janeiro, Salvador...): '
-    name = gets.strip.upcase.to_s
+    print 'Digite a Cidade a ser consultada (São Paulo, Salvador...): '
+    name = gets.strip
     rank_by_masc_city = CitiesController.new
     puts rank_by_masc_city.city_by_male(name)
   end

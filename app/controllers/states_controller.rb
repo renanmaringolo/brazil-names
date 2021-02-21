@@ -25,7 +25,7 @@ class StatesController < ApplicationController
       temp = [nome, code_state]
       linhas << temp
     end
-    Terminal::Table.new title: 'Estados', headings: ['Nome', 'Código Estado'], rows: linhas
+    Terminal::Table.new title: 'Estados', headings: ['Código do Estado', 'Nome'], rows: linhas
   end
 
   def ranking_general_state(acronym)

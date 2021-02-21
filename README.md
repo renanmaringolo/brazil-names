@@ -11,7 +11,7 @@ Este repositório foi criado para propor a solução do seguinte desafio: Desafi
 3) Executar bundle install em seu terminal para que as dependências do projeto sejam instaladas;
 
 ### Testando a aplicação
-Atualmente o projeto conta com 95,94% de cobertura de teste, de acordo com o SimpleCov.
+Atualmente o projeto conta com 96,44% de cobertura de teste, de acordo com o SimpleCov.
 * Executar bundle exec rspec em seu terminal para que os testes sejam executados e você veja seu retorno.
 
 ## Rodando o projeto localmente

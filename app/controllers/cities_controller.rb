@@ -26,8 +26,8 @@ class CitiesController < ApplicationController
     Terminal::Table.new title: 'Cidades', headings: ['Nome', 'Código Cidade'], rows: linhas
   end
 
-  def ranking_general_city
-    api_response = CitiesAPI.list_names_city
+  def ranking_general_city(name)
+    api_response = CitiesAPI.list_names_city(name)
 
     linhas = []
 
@@ -41,8 +41,8 @@ class CitiesController < ApplicationController
     Terminal::Table.new title: 'Ranking por Cidade', headings: %w[Nome Frequência Ranking], rows: linhas
   end
 
-  def city_by_female
-    api_response = CitiesAPI.by_female
+  def city_by_female(name)
+    api_response = CitiesAPI.by_female(name)
 
     linhas = []
 
@@ -57,8 +57,8 @@ class CitiesController < ApplicationController
                         rows: linhas
   end
 
-  def city_by_male
-    api_response = CitiesAPI.by_male
+  def city_by_male(name)
+    api_response = CitiesAPI.by_male(name)
 
     linhas = []
 

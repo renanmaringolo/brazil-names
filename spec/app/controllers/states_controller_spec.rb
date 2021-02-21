@@ -15,17 +15,26 @@ describe StatesController do
 
   describe '#ranking_general_state' do
     it 'list ranking names by State' do
-      expect(subject.ranking_general_state.columns.should).to eq([%w[MARIA JOSE], [11_734_129, 5_754_529], [1, 2]])
+      states = StatesController.new
+      rank = states.ranking_general_state('SP')
+
+      expect(rank.columns.should).to eq([%w[MARIA JOSE], [11_734_129, 5_754_529], [1, 2]])
     end
   end
 
   describe '#ranking_genre_state' do
     it 'list ranking by genre female state' do
-      expect(subject.state_by_female.columns.should).to eq([%w[MARIA ANA], [11_694_738, 3_079_729], [1, 2]])
+      states = StatesController.new
+      rank = states.state_by_female('SP')
+
+      expect(rank.columns.should).to eq([%w[MARIA ANA], [11_694_738, 3_079_729], [1, 2]])
     end
 
     it 'list ranking by genre male state' do
-      expect(subject.state_by_male.columns.should).to eq([%w[JOSE JOAO], [5_732_508, 2_971_935], [1, 2]])
+      states = StatesController.new
+      rank = states.state_by_male('SP')
+
+      expect(rank.columns.should).to eq([%w[JOSE JOAO], [5_732_508, 2_971_935], [1, 2]])
     end
   end
 end

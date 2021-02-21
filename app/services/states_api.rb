@@ -50,11 +50,16 @@ class StatesAPI
     ranking.last.last
   end
 
-  def self.by_female
+  def self.by_female(acronym)
+    uri = URI('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
+    response = RestClient.get(uri.to_s)
+    states_hash = JSON.parse(response.body)
+    state = states_hash.find { |state| state['sigla'] == acronym }
+
     case request
     when :api
       api_response = RestClient
-                     .get('https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=f')
+                     .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#{state['id']}&sexo=f")
     when :file
       api_response = File.read('spec/fixtures/states/rankings/state_female_names.json')
     end
@@ -64,11 +69,16 @@ class StatesAPI
     ranking.last.last
   end
 
-  def self.by_male
+  def self.by_male(acronym)
+    uri = URI('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
+    response = RestClient.get(uri.to_s)
+    states_hash = JSON.parse(response.body)
+    state = states_hash.find { |state| state['sigla'] == acronym }
+
     case request
     when :api
       api_response = RestClient
-                     .get('https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=m')
+                     .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#{state['id']}&sexo=m")
     when :file
       api_response = File.read('spec/fixtures/states/rankings/state_male_names.json')
     end

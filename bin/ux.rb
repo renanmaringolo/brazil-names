@@ -26,23 +26,33 @@ def menu
     ranking_general_state = StatesController.new
     puts ranking_general_state.ranking_general_state(acronym)
   when 3
+    print 'Digite a UF a ser consultada (SP, RJ...): '
+    acronym = gets.strip.upcase
     rank_by_fem_state = StatesController.new
-    puts rank_by_fem_state.state_by_female
+    puts rank_by_fem_state.state_by_female(acronym)
   when 4
+    print 'Digite a UF a ser consultada (SP, RJ...): '
+    acronym = gets.strip.upcase
     rank_by_masc_state = StatesController.new
-    puts rank_by_masc_state.state_by_male
+    puts rank_by_masc_state.state_by_male(acronym)
   when 5
     cities = CitiesController.new
     puts cities.index
   when 6
+    print 'Digite a UF a ser consultada (Rio de Janeiro, Salvador...): '
+    name = gets.strip.upcase.to_s
     ranking_by_city = CitiesController.new
-    puts ranking_by_city.ranking_general_city
+    puts ranking_by_city.ranking_general_city(name)
   when 7
+    print 'Digite a UF a ser consultada (Rio de Janeiro, Salvador...): '
+    name = gets.strip.upcase.to_s
     rank_by_fem_city = CitiesController.new
-    puts rank_by_fem_city.city_by_female
+    puts rank_by_fem_city.city_by_female(name)
   when 8
+    print 'Digite a UF a ser consultada (Rio de Janeiro, Salvador...): '
+    name = gets.strip.upcase.to_s
     rank_by_masc_city = CitiesController.new
-    puts rank_by_masc_city.city_by_male
+    puts rank_by_masc_city.city_by_male(name)
   end
 end
 

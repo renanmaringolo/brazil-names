@@ -15,18 +15,27 @@ describe CitiesController do
 
   describe '#ranking_general_city' do
     it 'list ranking names by City' do
-      expect(subject.ranking_general_city.columns.should).to eq([%w[MARIA JOSE JOAO], [3592, 2008, 1292],
-                                                                 [1, 2, 3]])
+      cities = CitiesController.new
+      rank = cities.ranking_general_city('São Paulo')
+
+      expect(rank.columns.should).to eq([%w[MARIA JOSE JOAO], [3592, 2008, 1292],
+                                         [1, 2, 3]])
     end
   end
 
   describe '#ranking_genre_city' do
     it 'list ranking by genre female city' do
-      expect(subject.city_by_female.columns.should).to eq([%w[MARIA ANA], [3581, 1116], [1, 2]])
+      cities = CitiesController.new
+      rank = cities.city_by_female('São Paulo')
+
+      expect(rank.columns.should).to eq([%w[MARIA ANA], [3581, 1116], [1, 2]])
     end
 
     it 'list ranking by genre male city' do
-      expect(subject.city_by_male.columns.should).to eq([%w[JOSE JOAO], [1998, 1288], [1, 2]])
+      cities = CitiesController.new
+      rank = cities.city_by_male('São Paulo')
+
+      expect(rank.columns.should).to eq([%w[JOSE JOAO], [1998, 1288], [1, 2]])
     end
   end
 end

@@ -43,8 +43,8 @@ class StatesController < ApplicationController
     Terminal::Table.new title: 'Ranking por Estado', headings: %w[Nome Frequência Ranking], rows: linhas
   end
 
-  def state_by_female
-    api_response = StatesAPI.by_female
+  def state_by_female(acronym)
+    api_response = StatesAPI.by_female(acronym)
 
     linhas = []
 
@@ -59,8 +59,8 @@ class StatesController < ApplicationController
                         rows: linhas
   end
 
-  def state_by_male
-    api_response = StatesAPI.by_male
+  def state_by_male(acronym)
+    api_response = StatesAPI.by_male(acronym)
 
     linhas = []
 

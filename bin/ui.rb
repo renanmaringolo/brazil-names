@@ -54,6 +54,9 @@ def menu
     name = gets.strip
     rank_by_masc_city = CitiesController.new
     puts rank_by_masc_city.city_by_male(name)
+  when 0
+    puts see_you
+    exit
   end
 end
 

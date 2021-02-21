@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def menu
   puts '==== Nomes Brasil ===='
   puts '## Menu ##'
@@ -49,23 +51,23 @@ def not_consult?
 end
 
 def see_you
-    puts
-    puts "             OOOOOOOOOOO               "
-    puts "         OOOOOOOOOOOOOOOOOOO           "
-    puts "      OOOOOO  OOOOOOOOO  OOOOOO        "
-    puts "    OOOOOO      OOOOO      OOOOOO      "
-    puts "  OOOOOOOO  #   OOOOO  #   OOOOOOOO    "
-    puts " OOOOOOOOOO    OOOOOOO    OOOOOOOOOO   "
-    puts "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  "
-    puts "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  "
-    puts "OOOO  OOOOOOOOOOOOOOOOOOOOOOOOO  OOOO  "
-    puts " OOOO  OOOOOOOOOOOOOOOOOOOOOOO  OOOO   "
-    puts "  OOOO   OOOOOOOOOOOOOOOOOOOO  OOOO    "
-    puts "    OOOOO   OOOOOOOOOOOOOOO   OOOO     "
-    puts "      OOOOOO   OOOOOOOOO   OOOOOO      "
-    puts "         OOOOOO         OOOOOO         "
-    puts "             OOOOOOOOOOOO              "
-    puts
-    puts "               Até Logo!                "
-    puts
+  puts
+  puts '             OOOOOOOOOOO               '
+  puts '         OOOOOOOOOOOOOOOOOOO           '
+  puts '      OOOOOO  OOOOOOOOO  OOOOOO        '
+  puts '    OOOOOO      OOOOO      OOOOOO      '
+  puts '  OOOOOOOO  #   OOOOO  #   OOOOOOOO    '
+  puts ' OOOOOOOOOO    OOOOOOO    OOOOOOOOOO   '
+  puts 'OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  '
+  puts 'OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  '
+  puts 'OOOO  OOOOOOOOOOOOOOOOOOOOOOOOO  OOOO  '
+  puts ' OOOO  OOOOOOOOOOOOOOOOOOOOOOO  OOOO   '
+  puts '  OOOO   OOOOOOOOOOOOOOOOOOOO  OOOO    '
+  puts '    OOOOO   OOOOOOOOOOOOOOO   OOOO     '
+  puts '      OOOOOO   OOOOOOOOO   OOOOOO      '
+  puts '         OOOOOO         OOOOOO         '
+  puts '             OOOOOOOOOOOO              '
+  puts
+  puts '               Até Logo!                '
+  puts
 end

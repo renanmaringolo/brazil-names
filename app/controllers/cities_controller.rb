@@ -23,7 +23,7 @@ class CitiesController < ApplicationController
       temp = [nome, code_city]
       linhas << temp
     end
-    Terminal::Table.new title: 'Cidades', headings: ['Nome', 'Código Cidade'], rows: linhas
+    Terminal::Table.new title: 'Cidades', headings: ['Código da Cidade', 'Nome'], rows: linhas
   end
 
   def ranking_general_city(name)

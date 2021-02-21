@@ -6,7 +6,7 @@ Este repositório foi criado para propor a solução do seguinte desafio: Desafi
 * Linguagem: Ruby (v 3.0.0)
 
 ## Setup
-1) Possuir o Ruby instalado na sua máquina (versão utilizada neste projeto, de preferência), assim como as outras dependências citadas em Informações técnicas;
+1) Possuir o Ruby instalado na sua máquina (versão utilizada neste projeto de preferência)
 2) Baixar este repositório com o comando: git clone git@github.com:renanmaringolo/brazil-names.git
 3) Executar bundle install em seu terminal para que as dependências do projeto sejam instaladas;
 

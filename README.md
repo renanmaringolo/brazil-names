@@ -17,6 +17,9 @@ Atualmente o projeto conta com 96,44% de cobertura de teste, de acordo com o Sim
 ## Rodando o projeto localmente
 Após fazer o mencionado acima, deve entrar na raiz do projeto e executar o seguinte comando: `./bin/app.rb` - Se solicitado, executar o seguinte comando para permissão do arquivo `chmod +x ./bin/app.rb `
 
+### Observação importante ao rodar a aplicação
+* Nas opções de Ranking no que se refere a Cidade, informar o nome da cidade corretamente, respeitando as letras iniciais maíusculas, acentos e espaços.
+
 ## Gems
 * RSpec (um dos métodos possíveis dentro do Ruby/Rails para desenvolver as classes de testes. Gosto muito do padrão do RSpec);
 * Simplecov (indica o percentual de cobertura de testes do seu projeto;

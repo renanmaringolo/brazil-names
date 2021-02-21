@@ -30,15 +30,17 @@ class StatesAPI
     JSON.parse(api_response)
   end
 
-  def self.list_names_state(acronym)
-    # isso vai se repetir depois e preciso refatorar para um método [WIP]
+  def self.get_acronym(acronym)
     uri = URI('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
     response = RestClient.get(uri.to_s)
     states_hash = JSON.parse(response.body)
     state = states_hash.find { |state| state['sigla'] == acronym }
+  end
 
+  def self.list_names_state(acronym)
     case request
     when :api
+      state = get_acronym(acronym)
       api_response = RestClient
                      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#{state['id']}")
     when :file
@@ -51,13 +53,9 @@ class StatesAPI
   end
 
   def self.by_female(acronym)
-    uri = URI('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
-    response = RestClient.get(uri.to_s)
-    states_hash = JSON.parse(response.body)
-    state = states_hash.find { |state| state['sigla'] == acronym }
-
     case request
     when :api
+      state = get_acronym(acronym)
       api_response = RestClient
                      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#{state['id']}&sexo=f")
     when :file
@@ -70,13 +68,9 @@ class StatesAPI
   end
 
   def self.by_male(acronym)
-    uri = URI('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
-    response = RestClient.get(uri.to_s)
-    states_hash = JSON.parse(response.body)
-    state = states_hash.find { |state| state['sigla'] == acronym }
-
     case request
     when :api
+      state = get_acronym(acronym)
       api_response = RestClient
                      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#{state['id']}&sexo=m")
     when :file

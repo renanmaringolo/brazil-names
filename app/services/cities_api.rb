@@ -29,14 +29,17 @@ class CitiesAPI
     JSON.parse(api_response)
   end
 
-  def self.list_names_city(name)
+  def self.get_city(name)
     uri = URI('https://servicodados.ibge.gov.br/api/v1/localidades/municipios')
     response = RestClient.get(uri.to_s)
     cities_hash = JSON.parse(response.body)
     city = cities_hash.find { |city| city['nome'] == name }
+  end
 
+  def self.list_names_city(name)
     case request
     when :api
+      city = get_city(name)
       api_response = RestClient
                      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#{city['id']}")
     when :file
@@ -49,13 +52,9 @@ class CitiesAPI
   end
 
   def self.by_female(name)
-    uri = URI('https://servicodados.ibge.gov.br/api/v1/localidades/municipios')
-    response = RestClient.get(uri.to_s)
-    cities_hash = JSON.parse(response.body)
-    city = cities_hash.find { |city| city['nome'] == name }
-
     case request
     when :api
+      city = get_city(name)
       api_response = RestClient
                      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#{city['id']}&sexo=f")
     when :file
@@ -68,13 +67,9 @@ class CitiesAPI
   end
 
   def self.by_male(name)
-    uri = URI('https://servicodados.ibge.gov.br/api/v1/localidades/municipios')
-    response = RestClient.get(uri.to_s)
-    cities_hash = JSON.parse(response.body)
-    city = cities_hash.find { |city| city['nome'] == name }
-
     case request
     when :api
+      city = get_city(name)
       api_response = RestClient
                      .get("https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#{city['id']}&sexo=m")
     when :file

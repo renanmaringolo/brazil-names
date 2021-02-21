@@ -3,7 +3,7 @@
 describe StatesController do
   describe '#show' do
     it 'show the state details' do
-      expect(described_class.new({ id: 11 }).show).to eq('MS')
+      expect(described_class.new({ id: 11 }).show).to eq(11)
     end
   end
 

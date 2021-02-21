@@ -21,8 +21,10 @@ def menu
     states = StatesController.new
     puts states.index
   when 2
-    ranking_by_state = StatesController.new
-    puts ranking_by_state.ranking_general_state
+    print 'Digite a UF a ser consultada (SP, RJ...): '
+    acronym = gets.strip.upcase
+    ranking_general_state = StatesController.new
+    puts ranking_general_state.ranking_general_state(acronym)
   when 3
     rank_by_fem_state = StatesController.new
     puts rank_by_fem_state.state_by_female

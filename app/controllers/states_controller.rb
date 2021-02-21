@@ -11,7 +11,7 @@ class StatesController < ApplicationController
   def show
     api_response = StatesAPI.get_state(params[:id])
 
-    api_response['sigla']
+    api_response['id']
   end
 
   def index
@@ -28,8 +28,8 @@ class StatesController < ApplicationController
     Terminal::Table.new title: 'Estados', headings: ['Nome', 'Código Estado'], rows: linhas
   end
 
-  def ranking_general_state
-    api_response = StatesAPI.list_names_state
+  def ranking_general_state(acronym)
+    api_response = StatesAPI.list_names_state(acronym)
 
     linhas = []
 

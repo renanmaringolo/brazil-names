@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.12.3/application.js' type='text/javascript'></script>
     <link href='./assets/0.12.3/application.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
-    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_green.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_yellow.png" />
     <link rel="icon" type="image/png" href="./assets/0.12.3/favicon.png" />
   </head>
 
@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-21T00:37:45-03:00">2021-02-21T00:37:45-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-02-21T01:58:47-03:00">2021-02-21T01:58:47-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,15 +22,15 @@
   <h2>
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
-      <span class="green">
-  95.94%
+      <span class="yellow">
+  87.05%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.25
+         1.14
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>8</b> files in total.
+    <b>7</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>197</b> relevant lines,
-    <span class="green"><b>189</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed. </span>
-    (<span class="green">
-  95.94%
+    <b>193</b> relevant lines,
+    <span class="green"><b>168</b> lines covered</span> and
+    <span class="red"><b>25</b> lines missed. </span>
+    (<span class="yellow">
+  87.05%
 </span>
 )
   </div>
@@ -94,12 +94,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#25f1a3340d0319d5c28de242b2e0f5abf9aaa3c2" class="src_link" title="app/controllers/states_controller.rb">app/controllers/states_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="yellow strong cell--number t-file__coverage">80.85 %</td>
             <td class="cell--number">77</td>
             <td class="cell--number">47</td>
-            <td class="cell--number">47</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.40</td>
+            <td class="cell--number">38</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">1.11</td>
             
           </tr>
         
@@ -116,12 +116,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#6416081c5c69b45573f35bcd980d5fbd24072b88" class="src_link" title="app/services/states_api.rb">app/services/states_api.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">87.50 %</td>
-            <td class="cell--number">74</td>
-            <td class="cell--number">32</td>
-            <td class="cell--number">28</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">0.97</td>
+            <td class="red strong cell--number t-file__coverage">66.67 %</td>
+            <td class="cell--number">79</td>
+            <td class="cell--number">36</td>
+            <td class="cell--number">24</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">0.72</td>
             
           </tr>
         
@@ -142,17 +142,6 @@
             <td class="cell--number">31</td>
             <td class="cell--number">15</td>
             <td class="cell--number">15</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
-            
-          </tr>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#689ccebcc28329a3a1d6a47af6b23903c0746b80" class="src_link" title="spec/terminal_table/table_spec.rb">spec/terminal_table/table_spec.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">8</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -1187,8 +1176,8 @@
   <div class="header">
     <h3>app/controllers/states_controller.rb</h3>
     <h4>
-      <span class="green">
-  100.0%
+      <span class="yellow">
+  80.85%
 </span>
 
       lines covered
@@ -1198,8 +1187,8 @@
 
     <div class="t-line-summary">
       <b>47</b> relevant lines.
-      <span class="green"><b>47</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>38</b> lines covered</span> and
+      <span class="red"><b>9</b> lines missed.</span>
     </div>
 
     
@@ -1359,7 +1348,7 @@
 
             
 
-            <code class="ruby">    api_response[&#39;sigla&#39;]</code>
+            <code class="ruby">    api_response[&#39;id&#39;]</code>
           </li>
         </div>
       
@@ -1546,18 +1535,18 @@
 
             
 
-            <code class="ruby">  def ranking_general_state</code>
+            <code class="ruby">  def ranking_general_state(acronym)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="32">
+            
             
 
             
 
-            <code class="ruby">    api_response = StatesAPI.list_names_state</code>
+            <code class="ruby">    api_response = StatesAPI.list_names_state(acronym)</code>
           </li>
         </div>
       
@@ -1573,8 +1562,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="34">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="34">
+            
             
 
             
@@ -1595,8 +1584,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="36">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="36">
+            
             
 
             
@@ -1606,8 +1595,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="37">
-            <span class="hits">2</span>
+          <li class="missed" data-hits="0" data-linenumber="37">
+            
             
 
             
@@ -1617,8 +1606,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="38">
-            <span class="hits">2</span>
+          <li class="missed" data-hits="0" data-linenumber="38">
+            
             
 
             
@@ -1628,8 +1617,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="39">
-            <span class="hits">2</span>
+          <li class="missed" data-hits="0" data-linenumber="39">
+            
             
 
             
@@ -1639,8 +1628,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="40">
-            <span class="hits">2</span>
+          <li class="missed" data-hits="0" data-linenumber="40">
+            
             
 
             
@@ -1650,8 +1639,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="41">
-            <span class="hits">2</span>
+          <li class="missed" data-hits="0" data-linenumber="41">
+            
             
 
             
@@ -1672,8 +1661,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="43">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="43">
+            
             
 
             
@@ -2899,8 +2888,8 @@
   <div class="header">
     <h3>app/services/states_api.rb</h3>
     <h4>
-      <span class="yellow">
-  87.5%
+      <span class="red">
+  66.67%
 </span>
 
       lines covered
@@ -2909,9 +2898,9 @@
     
 
     <div class="t-line-summary">
-      <b>32</b> relevant lines.
-      <span class="green"><b>28</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <b>36</b> relevant lines.
+      <span class="green"><b>24</b> lines covered</span> and
+      <span class="red"><b>12</b> lines missed.</span>
     </div>
 
     
@@ -3043,8 +3032,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="12">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="3" data-linenumber="12">
+            <span class="hits">3</span>
             
 
             
@@ -3280,29 +3269,29 @@
 
             
 
-            <code class="ruby">  def self.list_names_state</code>
+            <code class="ruby">  def self.list_names_state(acronym)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="34">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="34">
+            
             
 
             
 
-            <code class="ruby">    case request</code>
+            <code class="ruby">    uri = URI(&#39;https://servicodados.ibge.gov.br/api/v1/localidades/estados&#39;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="35">
+          <li class="missed" data-hits="0" data-linenumber="35">
             
             
 
             
 
-            <code class="ruby">    when :api</code>
+            <code class="ruby">    response = RestClient.get(uri.to_s)</code>
           </li>
         </div>
       
@@ -3313,18 +3302,18 @@
 
             
 
-            <code class="ruby">      api_response = RestClient</code>
+            <code class="ruby">    states_hash = JSON.parse(response.body)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="37">
+          <li class="missed" data-hits="0" data-linenumber="37">
             
             
 
             
 
-            <code class="ruby">                     .get(&#39;https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#35&#39;)</code>
+            <code class="ruby">    state = states_hash.find { |state| state[&#39;sigla&#39;] == acronym }</code>
           </li>
         </div>
       
@@ -3335,18 +3324,18 @@
 
             
 
-            <code class="ruby">    when :file</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="39">
+            
             
 
             
 
-            <code class="ruby">      api_response = File.read(&#39;spec/fixtures/states/rankings/ranking_names.json&#39;)</code>
+            <code class="ruby">    case request</code>
           </li>
         </div>
       
@@ -3357,29 +3346,29 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">    when :api</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="missed" data-hits="0" data-linenumber="41">
             
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      api_response = RestClient</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="42">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="42">
+            
             
 
             
 
-            <code class="ruby">    ranking = JSON.parse(api_response).first.to_a</code>
+            <code class="ruby">                     .get(&quot;https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?localidade=#{state[&#39;id&#39;]}&quot;)</code>
           </li>
         </div>
       
@@ -3390,18 +3379,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    when :file</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="44">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="44">
+            
             
 
             
 
-            <code class="ruby">    ranking.last.last</code>
+            <code class="ruby">      api_response = File.read(&#39;spec/fixtures/states/rankings/ranking_names.json&#39;)</code>
           </li>
         </div>
       
@@ -3412,7 +3401,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -3428,46 +3417,46 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="47">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="47">
+            
             
 
             
 
-            <code class="ruby">  def self.by_female</code>
+            <code class="ruby">    ranking = JSON.parse(api_response).first.to_a</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="48">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="48">
+            
             
 
             
 
-            <code class="ruby">    case request</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
+          <li class="missed" data-hits="0" data-linenumber="49">
             
             
 
             
 
-            <code class="ruby">    when :api</code>
+            <code class="ruby">    ranking.last.last</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="50">
+          <li class="never" data-hits="" data-linenumber="50">
             
             
 
             
 
-            <code class="ruby">      api_response = RestClient</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -3478,18 +3467,18 @@
 
             
 
-            <code class="ruby">                     .get(&#39;https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=f&#39;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="52">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    when :file</code>
+            
+
+            <code class="ruby">  def self.by_female</code>
           </li>
         </div>
       
@@ -3500,7 +3489,7 @@
 
             
 
-            <code class="ruby">      api_response = File.read(&#39;spec/fixtures/states/rankings/state_female_names.json&#39;)</code>
+            <code class="ruby">    case request</code>
           </li>
         </div>
       
@@ -3511,29 +3500,29 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">    when :api</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="missed" data-hits="0" data-linenumber="55">
             
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      api_response = RestClient</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="56">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="56">
+            
             
 
             
 
-            <code class="ruby">    ranking = JSON.parse(api_response).first.to_a</code>
+            <code class="ruby">                     .get(&#39;https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=f&#39;)</code>
           </li>
         </div>
       
@@ -3544,7 +3533,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    when :file</code>
           </li>
         </div>
       
@@ -3555,7 +3544,7 @@
 
             
 
-            <code class="ruby">    ranking.last.last</code>
+            <code class="ruby">      api_response = File.read(&#39;spec/fixtures/states/rankings/state_female_names.json&#39;)</code>
           </li>
         </div>
       
@@ -3566,7 +3555,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -3588,111 +3577,12 @@
 
             
 
-            <code class="ruby">  def self.by_male</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="62">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    case request</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="63">
-            
-            
-
-            
-
-            <code class="ruby">    when :api</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="64">
-            
-            
-
-            
-
-            <code class="ruby">      api_response = RestClient</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="65">
-            
-            
-
-            
-
-            <code class="ruby">                     .get(&#39;https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=m&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="66">
-            
-            
-
-            
-
-            <code class="ruby">    when :file</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="67">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      api_response = File.read(&#39;spec/fixtures/states/rankings/state_male_names.json&#39;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="68">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="69">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="70">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">    ranking = JSON.parse(api_response).first.to_a</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="71">
+          <li class="never" data-hits="" data-linenumber="62">
             
             
 
@@ -3703,7 +3593,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="72">
+          <li class="covered" data-hits="1" data-linenumber="63">
             <span class="hits">1</span>
             
 
@@ -3714,7 +3604,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="73">
+          <li class="never" data-hits="" data-linenumber="64">
             
             
 
@@ -3725,7 +3615,161 @@
         </div>
       
         <div>
+          <li class="never" data-hits="" data-linenumber="65">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="66">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.by_male</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="67">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    case request</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="68">
+            
+            
+
+            
+
+            <code class="ruby">    when :api</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="69">
+            
+            
+
+            
+
+            <code class="ruby">      api_response = RestClient</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="70">
+            
+            
+
+            
+
+            <code class="ruby">                     .get(&#39;https://servicodados.ibge.gov.br/api/v2/censos/nomes/ranking?sexo=m&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby">    when :file</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="72">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      api_response = File.read(&#39;spec/fixtures/states/rankings/state_male_names.json&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="73">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="never" data-hits="" data-linenumber="74">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="75">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    ranking = JSON.parse(api_response).first.to_a</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="76">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="77">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    ranking.last.last</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="78">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="79">
             
             
 
@@ -4211,7 +4255,7 @@
 
             
 
-            <code class="ruby">      expect(described_class.new({ id: 11 }).show).to eq(&#39;MS&#39;)</code>
+            <code class="ruby">      expect(described_class.new({ id: 11 }).show).to eq(11)</code>
           </li>
         </div>
       
@@ -4481,213 +4525,6 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="689ccebcc28329a3a1d6a47af6b23903c0746b80">
-  <div class="header">
-    <h3>spec/terminal_table/table_spec.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>8</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="1">
-            
-            
-
-            
-
-            <code class="ruby"># frozen_string_literal: true</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require &#39;spec_helper&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">module Terminal</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  describe Table do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    before :each do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      @table = Table.new</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it &#39;should select columns&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      @table &lt;&lt; [&#39;Alta Floresta dOeste&#39;]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      @table.column(0).should eq [&#39;Alta Floresta dOeste&#39;]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
             
             
 

@@ -4,6 +4,8 @@
 
 require 'rest-client'
 require 'json'
+require 'terminal-table'
+require_relative './application_controller'
 
 class StatesController < ApplicationController
   def show
@@ -15,32 +17,59 @@ class StatesController < ApplicationController
   def index
     api_response = StatesAPI.list_states
 
-    api_response.each_with_object([]) do |line_json, acc|
-      acc << line_json['sigla']
+    linhas = []
+  
+    api_response.each do |result|
+      nome = result.to_a[0].last
+      code_state = result.to_a[1].last
+      temp = [nome, code_state]
+      linhas << temp
     end
+    Terminal::Table.new :title => 'Estados', :headings => ['Nome', 'Código Estado'], :rows => linhas
   end
 
   def ranking_general_state
     api_response = StatesAPI.list_names_state
-
-    api_response.each_with_object([]) do |line_json, acc|
-      acc << line_json['nome']
+    
+    linhas = []
+  
+    api_response.each do |result|
+      nome = result.to_a[0].last
+      frequencia = result.to_a[1].last
+      rank = result.to_a[2].last
+      temp = [nome, frequencia, rank]
+      linhas << temp
     end
+    Terminal::Table.new :title => 'Ranking por Estado', :headings => ['Nome', 'Frequência', 'Ranking'], :rows => linhas
   end
 
   def state_by_female
     api_response = StatesAPI.by_female
 
-    api_response.each_with_object([]) do |line_json, acc|
-      acc << line_json['nome']
+    linhas = []
+  
+    api_response.each do |result|
+      nome = result.to_a[0].last
+      frequencia = result.to_a[1].last
+      rank = result.to_a[2].last
+      temp = [nome, frequencia, rank]
+      linhas << temp
     end
+    Terminal::Table.new :title => 'Ranking por Sexo Feminino/Estado', :headings => ['Nome', 'Frequência', 'Ranking'], :rows => linhas
   end
 
   def state_by_male
     api_response = StatesAPI.by_male
 
-    api_response.each_with_object([]) do |line_json, acc|
-      acc << line_json['nome']
+    linhas = []
+  
+    api_response.each do |result|
+      nome = result.to_a[0].last
+      frequencia = result.to_a[1].last
+      rank = result.to_a[2].last
+      temp = [nome, frequencia, rank]
+      linhas << temp
     end
+    Terminal::Table.new :title => 'Ranking por Sexo Masculino/Estado', :headings => ['Nome', 'Frequência', 'Ranking'], :rows => linhas
   end
 end

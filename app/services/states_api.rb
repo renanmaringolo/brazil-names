@@ -31,6 +31,7 @@ class StatesAPI
   end
 
   def self.list_names_state(acronym)
+    # isso vai se repetir depois e preciso refatorar para um método [WIP]
     uri = URI('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
     response = RestClient.get(uri.to_s)
     states_hash = JSON.parse(response.body)

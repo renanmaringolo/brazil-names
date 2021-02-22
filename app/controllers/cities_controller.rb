@@ -5,14 +5,14 @@
 require 'rest-client'
 require 'json'
 
-class CitiesController < ApplicationController
-  def show
-    api_response = CitiesAPI.get_city(params[:id])
+class CitiesController
+  def self.show(id)
+    api_response = CitiesAPI.get_city(id)
 
     api_response.first['id']
   end
 
-  def index
+  def self.index
     api_response = CitiesAPI.list_cities
 
     linhas = []
@@ -26,7 +26,7 @@ class CitiesController < ApplicationController
     Terminal::Table.new title: 'Cidades', headings: ['Código da Cidade', 'Nome'], rows: linhas
   end
 
-  def ranking_general_city(name)
+  def self.ranking_general_city(name)
     api_response = CitiesAPI.list_names_city(name)
 
     linhas = []
@@ -41,7 +41,7 @@ class CitiesController < ApplicationController
     Terminal::Table.new title: 'Ranking por Cidade', headings: %w[Nome Frequência Ranking], rows: linhas
   end
 
-  def city_by_female(name)
+  def self.city_by_female(name)
     api_response = CitiesAPI.by_female(name)
 
     linhas = []
@@ -57,7 +57,7 @@ class CitiesController < ApplicationController
                         rows: linhas
   end
 
-  def city_by_male(name)
+  def self.city_by_male(name)
     api_response = CitiesAPI.by_male(name)
 
     linhas = []

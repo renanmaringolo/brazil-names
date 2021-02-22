@@ -5,16 +5,15 @@
 require 'rest-client'
 require 'json'
 require 'terminal-table'
-require_relative './application_controller'
 
-class StatesController < ApplicationController
-  def show
-    api_response = StatesAPI.get_state(params[:id])
+class StatesController
+  def self.show(id)
+    api_response = StatesAPI.get_state(id)
 
     api_response['id']
   end
 
-  def index
+  def self.index
     api_response = StatesAPI.list_states
 
     linhas = []
@@ -28,7 +27,7 @@ class StatesController < ApplicationController
     Terminal::Table.new title: 'Estados', headings: ['Código do Estado', 'Nome'], rows: linhas
   end
 
-  def ranking_general_state(acronym)
+  def self.ranking_general_state(acronym)
     api_response = StatesAPI.list_names_state(acronym)
 
     linhas = []
@@ -43,7 +42,7 @@ class StatesController < ApplicationController
     Terminal::Table.new title: 'Ranking por Estado', headings: %w[Nome Frequência Ranking], rows: linhas
   end
 
-  def state_by_female(acronym)
+  def self.state_by_female(acronym)
     api_response = StatesAPI.by_female(acronym)
 
     linhas = []
@@ -59,7 +58,7 @@ class StatesController < ApplicationController
                         rows: linhas
   end
 
-  def state_by_male(acronym)
+  def self.state_by_male(acronym)
     api_response = StatesAPI.by_male(acronym)
 
     linhas = []

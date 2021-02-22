@@ -190,21 +190,6 @@
           null
         ]
       },
-      "/home/nan/Documents/code/challenge_rebase/app/controllers/application_controller.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
       "/home/nan/Documents/code/challenge_rebase/app/controllers/cities_controller.rb": {
         "lines": [
           null,
@@ -542,6 +527,6 @@
         ]
       }
     },
-    "timestamp": 1614033110
+    "timestamp": 1614033686
   }
 }

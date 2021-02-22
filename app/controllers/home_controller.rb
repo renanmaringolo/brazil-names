@@ -21,17 +21,17 @@ class HomeController
     when 1
       puts StatesController.index
     when 2
-      print 'Digite a UF a ser consultada (SP, RJ...): '
+      print 'Digite a UF a ser consultada (SP, RJ, BA...): '
       acronym = gets.strip.upcase
 
       puts StatesController.ranking_general_state(acronym)
     when 3
-      print 'Digite a UF a ser consultada (SP, RJ...): '
+      print 'Digite a UF a ser consultada (SP, RJ, BA...): '
       acronym = gets.strip.upcase
 
       puts StatesController.state_by_female(acronym)
     when 4
-      print 'Digite a UF a ser consultada (SP, RJ...): '
+      print 'Digite a UF a ser consultada (SP, RJ, BA...): '
       acronym = gets.strip.upcase
 
       puts StatesController.state_by_male(acronym)
